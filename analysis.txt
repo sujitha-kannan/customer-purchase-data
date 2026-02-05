@@ -1,40 +1,54 @@
-CUSTOMER PURCHASE DATA – DETAILED ANALYSIS
+DELIVERABLE 3: STATISTICAL ANALYSIS & INTERPRETATION
 
+Project: Analyzing Synthetic Customer Purchase Data
 
 1. Age Distribution Analysis
 
- The average customer age is around 41 years.
- The distribution spans from young adults (18) to seniors (64).
- The standard deviation indicates moderate age diversity.
+The average customer age is 41.4 years, indicating a predominantly middle-aged
+customer base. The interquartile range (30 to 52 years) shows that most customers
+belong to active working-age groups. The moderate standard deviation suggests
+balanced age diversity without extreme outliers.
 
-2. Income Analysis
+2. Income Distribution Analysis
 
- Mean and median income values are nearly equal, suggesting a balanced distribution.
- A high standard deviation indicates significant income variation among customers.
- The wide income range suggests the presence of multiple economic segments.
+Income has a mean of 50,794 and a median of 50,660, indicating a near-symmetric
+distribution. However, the wide range (15,000 to 97,510) and high standard
+deviation reveal significant income inequality. This suggests the presence of
+multiple economic segments within the customer population.
 
-3. Purchase Amount Analysis
+3. Purchase Amount Distribution Analysis
 
- Most purchase amounts are clustered at 2,000.
- The median, 75th percentile, and maximum all equal 2,000, indicating a spending cap.
- Lower purchase values pull the mean below the median, indicating left skewness.
+Purchase_Amount shows strong right-censoring at 2,000. The median, 75th percentile,
+and maximum are all equal to 2,000, clearly indicating a spending ceiling.
+Lower purchase values (minimum 795.08) pull the mean below the median, producing
+a left-skewed distribution.
 
-4. Product Category Insight
+4. Visualization-Based Insights
 
- The dataset includes multiple product categories such as Sports, Groceries,
-  and Electronics.
- Purchase behavior appears consistent across categories in terms of amount.
+Box plots of Purchase_Amount by Product_Category show that most categories have
+median values near the 2,000 cap. Differences across categories are primarily
+observed in the lower quartiles, suggesting variation in minimum spending rather
+than maximum spending. This pattern supports the conclusion that purchases are
+constrained by system rules rather than customer income.
 
-5. Business & ML Interpretation
+5. Income vs Purchase Amount Relationship
 
- Income variability does not strongly affect purchase amount.
- Customer behavior suggests fixed-price or capped purchase policies.
- Suitable ML use cases:
+Despite wide income variation, purchase amounts remain tightly clustered.
+This indicates a weak or negligible relationship between Income and Purchase_Amount.
+A scatter plot would show horizontal clustering around Purchase_Amount = 2,000,
+confirming that income does not significantly influence spending in this dataset.
+
+6. Business and Modeling Implications
+
+ Purchase behavior is driven by fixed limits rather than customer purchasing power.
+ Income is better suited for customer segmentation than spending prediction.
+ Appropriate ML tasks include:
    Customer segmentation
-   Spending pattern analysis
-   Classification based on product category
+   Product category classification
+   Behavioral pattern analysis
 
-6. Final Analytical Conclusion
+7. Final Analytical Conclusion
 
-This dataset reflects controlled purchasing behavior across a diverse customer base.
-It is well-structured, balanced, and ready for modeling without additional cleaning.
+This dataset demonstrates controlled purchasing behavior across diverse income
+groups. The analysis highlights the importance of identifying system constraints
+before drawing conclusions about customer spending patterns.

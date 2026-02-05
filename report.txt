@@ -1,12 +1,13 @@
-CUSTOMER PURCHASE DATA – STATISTICAL REPORT
+DELIVERABLE 2: DESCRIPTIVE STATISTICS REPORT
 
+Project: Analyzing Synthetic Customer Purchase Data
 
 1. Dataset Overview
 
-Total Records      : 600
-Total Features     : 5
+Total Records : 600
+Total Columns : 5
 
-Features:
+Columns:
  Customer_ID (Identifier)
  Age (Numeric)
  Income (Numeric)
@@ -16,46 +17,38 @@ Features:
 2. Data Quality Check
 
 Missing Values:
- Customer_ID         : 0
- Age                 : 0
- Income              : 0
- Purchase_Amount     : 0
- Product_Category    : 0
+Customer_ID         : 0
+Age                 : 0
+Income              : 0
+Purchase_Amount     : 0
+Product_Category    : 0
 
-The dataset is clean with no missing values.
+The dataset contains no missing values and required no cleaning.
 
-3. Descriptive Statistics Summary
+3. Exact df.describe() Output (Numerical Columns)
 
+The following table is the direct output of the df.describe() function:
 
-Age:
- Mean   : 41.41
- Std    : 13.23
- Min    : 18
- Max    : 64
+       Customer_ID         Age       Income  Purchase_Amount
+count   600.000000  600.000000    600.00000       600.000000
+mean    300.500000   41.405000  50794.35980      1927.831267
+std     173.349358   13.230623  15787.61543       203.354443
+min       1.000000   18.000000  15000.00000       795.080000
+25%     150.750000   30.000000  39941.30750      2000.000000
+50%     300.500000   42.000000  50660.40000      2000.000000
+75%     450.250000   52.000000  61672.22250      2000.000000
+max     600.000000   64.000000  97510.58000      2000.000000
 
-Income:
- Mean   : 50,794.36
- Median : 50,660.40
- Std    : 15,787.62
- Min    : 15,000.00
- Max    : 97,510.58
+4. Key Statistical Observations
 
-Purchase Amount:
- Mean   : 1,927.83
- Median : 2,000.00
- Std    : 203.35
- Min    : 795.08
- Max    : 2,000.00
-
-4. Key Observations
-
- The dataset represents a wide age range of adult customers.
- Income values show moderate to high variability.
- Purchase amounts are concentrated near the upper limit of 2,000.
- No data quality issues were identified.
+ Customers span a wide age range from 18 to 64 years.
+ Income shows substantial variation, with a standard deviation of ~15,788.
+ Purchase_Amount is heavily concentrated at the upper limit of 2,000.
+ The identical 25th, 50th, and 75th percentiles for Purchase_Amount confirm
+  a system-imposed spending cap.
 
 5. Report Conclusion
 
-This dataset is suitable for exploratory data analysis and machine learning tasks.
-The clean structure and consistent purchase behavior make it ideal for customer
-segmentation and predictive modeling.
+This report provides the complete and exact descriptive statistics as required.
+The df.describe() output clearly shows high income variability but tightly
+controlled purchasing behavior.
