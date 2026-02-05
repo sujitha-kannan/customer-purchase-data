@@ -1,54 +1,61 @@
-DELIVERABLE 2: DESCRIPTIVE STATISTICS REPORT
+Customer Churn Dataset – Summary Report
 
-Project: Analyzing Synthetic Customer Purchase Data
+Dataset Overview
+A dataset containing 500 customer records was successfully created and validated. Each record represents a customer with information related to tenure, monthly charges, contract type, service tier, and churn status.
 
-1. Dataset Overview
+Data Quality Assessment
 
-Total Records : 600
-Total Columns : 5
+No missing values were detected across any variables.
 
-Columns:
- Customer_ID (Identifier)
- Age (Numeric)
- Income (Numeric)
- Purchase_Amount (Numeric)
- Product_Category (Categorical)
+All numerical and categorical fields are complete and suitable for analysis.
 
-2. Data Quality Check
+Key Variables
 
-Missing Values:
-Customer_ID         : 0
-Age                 : 0
-Income              : 0
-Purchase_Amount     : 0
-Product_Category    : 0
+TenureMonths: Length of time (in months) a customer has remained with the company.
 
-The dataset contains no missing values and required no cleaning.
+MonthlyCharge: Monthly billing amount for the customer.
 
-3. Exact df.describe() Output (Numerical Columns)
+ContractType: Type of customer contract.
 
-The following table is the direct output of the df.describe() function:
+ServiceTier: Level of service subscribed.
 
-       Customer_ID         Age       Income  Purchase_Amount
-count   600.000000  600.000000    600.00000       600.000000
-mean    300.500000   41.405000  50794.35980      1927.831267
-std     173.349358   13.230623  15787.61543       203.354443
-min       1.000000   18.000000  15000.00000       795.080000
-25%     150.750000   30.000000  39941.30750      2000.000000
-50%     300.500000   42.000000  50660.40000      2000.000000
-75%     450.250000   52.000000  61672.22250      2000.000000
-max     600.000000   64.000000  97510.58000      2000.000000
+Churn: Indicates whether the customer has churned (Yes/No).
 
-4. Key Statistical Observations
+Descriptive Statistics (Numerical Variables)
 
- Customers span a wide age range from 18 to 64 years.
- Income shows substantial variation, with a standard deviation of ~15,788.
- Purchase_Amount is heavily concentrated at the upper limit of 2,000.
- The identical 25th, 50th, and 75th percentiles for Purchase_Amount confirm
-  a system-imposed spending cap.
+TenureMonths
 
-5. Report Conclusion
+Average tenure: 35.68 months
 
-This report provides the complete and exact descriptive statistics as required.
-The df.describe() output clearly shows high income variability but tightly
-controlled purchasing behavior.
+Minimum: 1 month
+
+Maximum: 71 months
+
+MonthlyCharge
+
+Average charge: 70.93
+
+Minimum: 20.00
+
+Maximum: 133.49
+
+Churn Overview
+
+Overall churn rate in the dataset is 51.60%, indicating that slightly more than half of the customers have churned.
+
+Bivariate Summary
+
+Customers who churned have:
+
+Higher average monthly charges (73.34)
+
+Shorter average tenure (31.13 months)
+
+Customers who did not churn have:
+
+Lower average monthly charges (68.37)
+
+Longer average tenure (40.53 months)
+
+Conclusion
+The dataset is clean, balanced, and suitable for further statistical analysis or predictive modeling related to customer churn.

@@ -1,54 +1,45 @@
-DELIVERABLE 3: STATISTICAL ANALYSIS & INTERPRETATION
+Customer Churn Analysis
 
-Project: Analyzing Synthetic Customer Purchase Data
+Data Integrity and Distribution
+The dataset shows strong data integrity with zero missing values across all variables. Numerical variables such as tenure and monthly charges exhibit reasonable ranges and variability, suggesting realistic customer behavior patterns.
 
-1. Age Distribution Analysis
+Churn Rate Interpretation
+An overall churn rate of 51.60% is relatively high and suggests a potential retention issue. This level of churn warrants deeper investigation into customer behavior and service-related factors.
 
-The average customer age is 41.4 years, indicating a predominantly middle-aged
-customer base. The interquartile range (30 to 52 years) shows that most customers
-belong to active working-age groups. The moderate standard deviation suggests
-balanced age diversity without extreme outliers.
+Tenure and Churn Relationship
 
-2. Income Distribution Analysis
+Customers who churned have an average tenure of 31.13 months.
 
-Income has a mean of 50,794 and a median of 50,660, indicating a near-symmetric
-distribution. However, the wide range (15,000 to 97,510) and high standard
-deviation reveal significant income inequality. This suggests the presence of
-multiple economic segments within the customer population.
+Customers who remained have a significantly higher average tenure of 40.53 months.
 
-3. Purchase Amount Distribution Analysis
+This indicates a negative relationship between tenure and churn, where longer-tenured customers are less likely to leave. Customer loyalty appears to strengthen over time.
 
-Purchase_Amount shows strong right-censoring at 2,000. The median, 75th percentile,
-and maximum are all equal to 2,000, clearly indicating a spending ceiling.
-Lower purchase values (minimum 795.08) pull the mean below the median, producing
-a left-skewed distribution.
+Monthly Charges and Churn Relationship
 
-4. Visualization-Based Insights
+Churned customers pay an average of 73.34 per month.
 
-Box plots of Purchase_Amount by Product_Category show that most categories have
-median values near the 2,000 cap. Differences across categories are primarily
-observed in the lower quartiles, suggesting variation in minimum spending rather
-than maximum spending. This pattern supports the conclusion that purchases are
-constrained by system rules rather than customer income.
+Non-churned customers pay an average of 68.37 per month.
 
-5. Income vs Purchase Amount Relationship
+Higher monthly charges are associated with increased churn, suggesting price sensitivity or perceived lack of value among higher-paying customers.
 
-Despite wide income variation, purchase amounts remain tightly clustered.
-This indicates a weak or negligible relationship between Income and Purchase_Amount.
-A scatter plot would show horizontal clustering around Purchase_Amount = 2,000,
-confirming that income does not significantly influence spending in this dataset.
+Behavioral Insights
 
-6. Business and Modeling Implications
+Newer customers with higher monthly charges represent a higher churn risk.
 
- Purchase behavior is driven by fixed limits rather than customer purchasing power.
- Income is better suited for customer segmentation than spending prediction.
- Appropriate ML tasks include:
-   Customer segmentation
-   Product category classification
-   Behavioral pattern analysis
+Longer-tenured customers are more stable, even with moderate pricing.
 
-7. Final Analytical Conclusion
+Implications for Business Strategy
 
-This dataset demonstrates controlled purchasing behavior across diverse income
-groups. The analysis highlights the importance of identifying system constraints
-before drawing conclusions about customer spending patterns.
+Introduce retention incentives for early-tenure customers.
+
+Review pricing strategies or add value for customers with higher monthly charges.
+
+Use tenure and monthly charge as key predictors in churn prediction models.
+
+Next Steps
+
+Perform multivariate analysis including contract type and service tier.
+
+Build a churn prediction model using tenure and monthly charges as primary features.
+
+Segment customers by risk level to design targeted retention campaigns.
