@@ -1,43 +1,26 @@
-Customer Churn Dataset – Report
+REPORT: Exploratory Analysis of Synthetic Customer Churn Data
 
-Dataset Creation
-A synthetic customer churn dataset containing 500 records was generated using Python.
-The dataset includes customer tenure, monthly charges, contract type, service tier,
-and churn status.
+Dataset Overview: - Total Records: 500 - No missing values across all
+variables.
 
-Data Quality Check
-A missing values check confirmed that there are no missing values in the dataset.
-All variables are complete and suitable for analysis.
+Descriptive Statistics: The average customer tenure is 35.68 months with
+a standard deviation of 20.81 months. Monthly charges average $70.93
+with a standard deviation of $21.51. Charges range from $20.00 to
+$133.49, while tenure ranges from 1 to 71 months.
 
-Variables Included
- TenureMonths: Number of months a customer has stayed with the company
- MonthlyCharge: Monthly billing amount charged to the customer
- ContractType: Type of customer contract (Month-to-Month, One Year, Two Year)
- ServiceTier: Level of service subscribed (Basic, Standard, Premium)
- Churn: Customer churn indicator (0 = No, 1 = Yes)
+Overall Churn Rate: The overall churn rate in the dataset is 51.60%,
+indicating that slightly more than half of the customers in this
+synthetic dataset have churned.
 
-Descriptive Statistics
-TenureMonths:
- Mean: 35.68 months
- Minimum: 1 month
- Maximum: 71 months
+Bivariate Analysis Summary: Customers who churned have a higher average
+monthly charge ($73.34) compared to non-churned customers ($68.37), a
+difference of $4.98. Churned customers also exhibit a shorter average
+tenure (31.13 months) than non-churned customers (40.53 months), a
+difference of 9.40 months.
 
-MonthlyCharge:
- Mean: 70.93
- Minimum: 20.00
- Maximum: 133.49
+Contract Type and Churn: Month-to-Month contracts have the highest churn
+rate at 60.75%. One Year and Two Year contracts show lower churn rates
+at 40.77% and 41.90% respectively.
 
-Overall Churn Rate
-The overall churn rate in the dataset is 51.60%, indicating that slightly more than
-half of the customers have churned.
-
-Bivariate Summary
- Average Monthly Charge (Churned): 73.34
- Average Monthly Charge (Not Churned): 68.37
- Average Tenure (Churned): 31.13 months
- Average Tenure (Not Churned): 40.53 months
-
-Conclusion
-The dataset is clean, well-structured, and appropriate for churn analysis and
-predictive modeling. Initial patterns suggest that tenure and monthly charges
-are important factors influencing customer churn.
+Conclusion: Higher monthly charges, shorter tenure, and month-to-month
+contracts are associated with increased churn in this synthetic dataset.
