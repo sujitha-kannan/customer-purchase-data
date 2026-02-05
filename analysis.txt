@@ -1,40 +1,40 @@
 CUSTOMER PURCHASE DATA – DETAILED ANALYSIS
-=========================================
+
 
 1. Age Distribution Analysis
-----------------------------
-- The average customer age is around 41 years.
-- The distribution spans from young adults (18) to seniors (64).
-- The standard deviation indicates moderate age diversity.
+
+ The average customer age is around 41 years.
+ The distribution spans from young adults (18) to seniors (64).
+ The standard deviation indicates moderate age diversity.
 
 2. Income Analysis
-------------------
-- Mean and median income values are nearly equal, suggesting a balanced distribution.
-- A high standard deviation indicates significant income variation among customers.
-- The wide income range suggests the presence of multiple economic segments.
+
+ Mean and median income values are nearly equal, suggesting a balanced distribution.
+ A high standard deviation indicates significant income variation among customers.
+ The wide income range suggests the presence of multiple economic segments.
 
 3. Purchase Amount Analysis
----------------------------
-- Most purchase amounts are clustered at 2,000.
-- The median, 75th percentile, and maximum all equal 2,000, indicating a spending cap.
-- Lower purchase values pull the mean below the median, indicating left skewness.
+
+ Most purchase amounts are clustered at 2,000.
+ The median, 75th percentile, and maximum all equal 2,000, indicating a spending cap.
+ Lower purchase values pull the mean below the median, indicating left skewness.
 
 4. Product Category Insight
----------------------------
-- The dataset includes multiple product categories such as Sports, Groceries,
+
+ The dataset includes multiple product categories such as Sports, Groceries,
   and Electronics.
-- Purchase behavior appears consistent across categories in terms of amount.
+ Purchase behavior appears consistent across categories in terms of amount.
 
 5. Business & ML Interpretation
---------------------------------
-- Income variability does not strongly affect purchase amount.
-- Customer behavior suggests fixed-price or capped purchase policies.
-- Suitable ML use cases:
-  - Customer segmentation
-  - Spending pattern analysis
-  - Classification based on product category
+
+ Income variability does not strongly affect purchase amount.
+ Customer behavior suggests fixed-price or capped purchase policies.
+ Suitable ML use cases:
+   Customer segmentation
+   Spending pattern analysis
+   Classification based on product category
 
 6. Final Analytical Conclusion
-------------------------------
+
 This dataset reflects controlled purchasing behavior across a diverse customer base.
 It is well-structured, balanced, and ready for modeling without additional cleaning.
