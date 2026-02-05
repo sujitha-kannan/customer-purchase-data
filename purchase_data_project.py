@@ -1,4 +1,3 @@
-
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,7 +5,6 @@ import seaborn as sns
 
 
 np.random.seed(42)
-
 num_records = 500
 
 tenure_months = np.random.randint(1, 72, num_records)
@@ -25,7 +23,6 @@ service_tier = np.random.choice(
     p=[0.4, 0.35, 0.25]
 )
 
-
 churn_probability = (
     0.45 * (monthly_charges / 150) +
     0.35 * (1 - tenure_months / 72) +
@@ -35,29 +32,28 @@ churn_probability = (
 churn_probability = np.clip(churn_probability, 0, 1)
 churn = np.random.binomial(1, churn_probability)
 
-
 df = pd.DataFrame({
-    'TenureMonths': tenure_months,
+    'TenureMonths': tenure_months.astype(int),
     'MonthlyCharge': monthly_charges.round(2),
     'ContractType': contract_type,
     'ServiceTier': service_tier,
-    'Churn': churn
+    'Churn': churn.astype(int)
 })
 
-print("\nDataset created successfully with", len(df), "records")
+print("\nDATASET OVERVIEW")
+print("Total Records:", len(df))
 
-print("\nMissing Values Check:")
+print("\nMISSING VALUES CHECK")
 print(df.isnull().sum())
 
-df['TenureMonths'] = df['TenureMonths'].astype(int)
-df['Churn'] = df['Churn'].astype(int)
 
+print("\nDESCRIPTIVE STATISTICS (NUMERICAL FEATURES)")
+desc_stats = df[['TenureMonths', 'MonthlyCharge']].describe()
+print(desc_stats)
 
-print("\nDescriptive Statistics (Numerical Columns):")
-print(df[['TenureMonths', 'MonthlyCharge']].describe())
 
 churn_rate = df['Churn'].mean() * 100
-print(f"\nOverall Churn Rate: {churn_rate:.2f}%")
+print(f"\nOVERALL CHURN RATE: {churn_rate:.2f}%")
 
 
 churned = df[df['Churn'] == 1]
@@ -69,11 +65,20 @@ avg_monthly_charge_not_churned = not_churned['MonthlyCharge'].mean()
 avg_tenure_churned = churned['TenureMonths'].mean()
 avg_tenure_not_churned = not_churned['TenureMonths'].mean()
 
-print("\nBivariate Analysis Results:")
+print("\nBIVARIATE ANALYSIS RESULTS")
+
 print(f"Average Monthly Charge (Churned): {avg_monthly_charge_churned:.2f}")
 print(f"Average Monthly Charge (Not Churned): {avg_monthly_charge_not_churned:.2f}")
-print(f"Average Tenure Months (Churned): {avg_tenure_churned:.2f}")
+print(f"Difference: {(avg_monthly_charge_churned - avg_monthly_charge_not_churned):.2f}")
+
+print(f"\nAverage Tenure Months (Churned): {avg_tenure_churned:.2f}")
 print(f"Average Tenure Months (Not Churned): {avg_tenure_not_churned:.2f}")
+print(f"Difference: {(avg_tenure_not_churned - avg_tenure_churned):.2f}")
+
+
+print("\nCHURN RATE BY CONTRACT TYPE")
+contract_churn = df.groupby('ContractType')['Churn'].mean() * 100
+print(contract_churn.round(2))
 
 
 plt.figure(figsize=(8, 5))
@@ -84,7 +89,6 @@ plt.ylabel('Monthly Charge')
 plt.tight_layout()
 plt.show()
 
-
 plt.figure(figsize=(8, 5))
 sns.countplot(x='ContractType', hue='Churn', data=df)
 plt.title('Customer Count by Contract Type and Churn Status')
@@ -93,4 +97,3 @@ plt.ylabel('Number of Customers')
 plt.legend(title='Churn')
 plt.tight_layout()
 plt.show()
-
