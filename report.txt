@@ -1,0 +1,61 @@
+CUSTOMER PURCHASE DATA – STATISTICAL REPORT
+==========================================
+
+1. Dataset Overview
+-------------------
+Total Records      : 600
+Total Features     : 5
+
+Features:
+- Customer_ID (Identifier)
+- Age (Numeric)
+- Income (Numeric)
+- Purchase_Amount (Numeric)
+- Product_Category (Categorical)
+
+2. Data Quality Check
+---------------------
+Missing Values:
+- Customer_ID         : 0
+- Age                 : 0
+- Income              : 0
+- Purchase_Amount     : 0
+- Product_Category    : 0
+
+The dataset is clean with no missing values.
+
+3. Descriptive Statistics Summary
+---------------------------------
+
+Age:
+- Mean   : 41.41
+- Std    : 13.23
+- Min    : 18
+- Max    : 64
+
+Income:
+- Mean   : 50,794.36
+- Median : 50,660.40
+- Std    : 15,787.62
+- Min    : 15,000.00
+- Max    : 97,510.58
+
+Purchase Amount:
+- Mean   : 1,927.83
+- Median : 2,000.00
+- Std    : 203.35
+- Min    : 795.08
+- Max    : 2,000.00
+
+4. Key Observations
+-------------------
+- The dataset represents a wide age range of adult customers.
+- Income values show moderate to high variability.
+- Purchase amounts are concentrated near the upper limit of 2,000.
+- No data quality issues were identified.
+
+5. Report Conclusion
+--------------------
+This dataset is suitable for exploratory data analysis and machine learning tasks.
+The clean structure and consistent purchase behavior make it ideal for customer
+segmentation and predictive modeling.
