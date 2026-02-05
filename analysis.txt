@@ -1,45 +1,43 @@
 Customer Churn Analysis
 
-Data Integrity and Distribution
-The dataset shows strong data integrity with zero missing values across all variables. Numerical variables such as tenure and monthly charges exhibit reasonable ranges and variability, suggesting realistic customer behavior patterns.
+Overview
+This analysis explores customer churn behavior using tenure length, monthly charges,
+and contract characteristics. The dataset consists of 500 customer records with no
+missing values.
 
 Churn Rate Interpretation
-An overall churn rate of 51.60% is relatively high and suggests a potential retention issue. This level of churn warrants deeper investigation into customer behavior and service-related factors.
+An overall churn rate of 51.60% is relatively high and suggests a significant customer
+retention challenge. This makes the dataset suitable for churn prediction modeling
+and retention strategy evaluation.
 
-Tenure and Churn Relationship
+Tenure and Churn
+Customers who churned have an average tenure of 31.13 months, while customers who
+did not churn have an average tenure of 40.53 months.
+This indicates a negative relationship between tenure and churn, where customers
+who stay longer are less likely to leave.
 
-Customers who churned have an average tenure of 31.13 months.
+Monthly Charges and Churn
+The average monthly charge for churned customers is 73.34, compared to 68.37 for
+non-churned customers.
+Higher monthly charges appear to be associated with a higher likelihood of churn,
+suggesting price sensitivity or perceived lack of value.
 
-Customers who remained have a significantly higher average tenure of 40.53 months.
+Contract Type Influence
+The churn probability calculation places higher risk on Month-to-Month contracts.
+This aligns with typical business observations where flexible contracts lead to
+higher churn compared to long-term commitments.
 
-This indicates a negative relationship between tenure and churn, where longer-tenured customers are less likely to leave. Customer loyalty appears to strengthen over time.
+Visualization Insights
+Boxplots show that churned customers tend to have higher monthly charges.
+Count plots indicate that Month-to-Month customers experience higher churn counts
+than customers on One Year or Two Year contracts.
 
-Monthly Charges and Churn Relationship
-
-Churned customers pay an average of 73.34 per month.
-
-Non-churned customers pay an average of 68.37 per month.
-
-Higher monthly charges are associated with increased churn, suggesting price sensitivity or perceived lack of value among higher-paying customers.
-
-Behavioral Insights
-
-Newer customers with higher monthly charges represent a higher churn risk.
-
-Longer-tenured customers are more stable, even with moderate pricing.
-
-Implications for Business Strategy
-
-Introduce retention incentives for early-tenure customers.
-
-Review pricing strategies or add value for customers with higher monthly charges.
-
-Use tenure and monthly charge as key predictors in churn prediction models.
+Business Implications
+ Focus retention efforts on early-tenure customers
+ Offer incentives or discounts to high-paying customers
+ Encourage long-term contracts to reduce churn risk
 
 Next Steps
-
-Perform multivariate analysis including contract type and service tier.
-
-Build a churn prediction model using tenure and monthly charges as primary features.
-
-Segment customers by risk level to design targeted retention campaigns.
+ Perform multivariate analysis including service tier
+ Build a churn prediction model using logistic regression or tree-based methods
+ Segment customers by churn risk for targeted retention strategies
